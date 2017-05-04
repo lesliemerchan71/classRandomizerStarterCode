@@ -1,21 +1,18 @@
-$(document).ready(function(){
+$(document).ready( function(){
     
     var Students = ['Monserrat', 'Adonis', 'Leslie'];
     var Teachers = ['Julia', 'Zack', 'Aaron', 'Justin', 'Alyxe'];
     
-    var RandomOne = Math.floor(Math.random()*Students.length);
-    var RandomTwo = Math.floor(Math.random()*Teachers.length);
+    $('#studentButton').click( function() {
+        var Random = Math.floor(Math.random()*Students.length);
+        $("#studentDisplay").html(Students[Random]);
+    });
     
-    
-    $('#studentButton').click(function() {
-        var RandomOne = Math.floor(Math.random()*Students.length);
-        $("#studentDisplay").append(Students[RandomOne]);
-    }
-    
-    $('#teacherButton').click(function() {
-        var RandomTwo = Math.floor(Math.random()*Teachers.length);
-        $("#teacherDisplay").append(Teachers[RandomTwo]);
-    }
+    $("#teacherButton").click( function() {
+        var Random = Math.floor(Math.random()*Teachers.length);
+        $("#teacherDisplay").html(Teachers[Random]);
+    });
     
 //change to jquery to do append//
 });
+
